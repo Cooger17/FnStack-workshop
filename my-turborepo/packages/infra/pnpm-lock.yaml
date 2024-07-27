@@ -7,40 +7,6 @@ settings:
 importers:
 
   .:
-    devDependencies:
-      prettier:
-        specifier: ^3.2.5
-        version: 3.2.5
-      turbo:
-        specifier: ^2.0.9
-        version: 2.0.9
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
-  packages/application:
-    dependencies:
-      '@fnshop/domain':
-        specifier: workspace:*
-        version: link:../domain
-      zod:
-        specifier: 3.23.8
-        version: 3.23.8
-    devDependencies:
-      '@fnshop/tsconfig':
-        specifier: workspace:*)
-        version: link:../tsconfig
-      '@types/node':
-        specifier: 20.14.12
-        version: 20.14.12
-      tsup:
-        specifier: 8.2.3
-        version: 8.2.3(typescript@5.5.4)
-      typescript:
-        specifier: 5.5.4
-        version: 5.5.4
-
-  packages/domain:
     dependencies:
       zod:
         specifier: 3.23.8
@@ -58,33 +24,6 @@ importers:
       typescript:
         specifier: 5.5.4
         version: 5.5.4
-
-  packages/infra:
-    dependencies:
-      '@fnshop/application':
-        specifier: workspace:*
-        version: link:../application
-      '@fnshop/domain':
-        specifier: workspace:*
-        version: link:../domain
-      zod:
-        specifier: 3.23.8
-        version: 3.23.8
-    devDependencies:
-      '@fnshop/tsconfig':
-        specifier: workspace:*)
-        version: link:../tsconfig
-      '@types/node':
-        specifier: 20.14.12
-        version: 20.14.12
-      tsup:
-        specifier: 8.2.3
-        version: 8.2.3(typescript@5.5.4)
-      typescript:
-        specifier: 5.5.4
-        version: 5.5.4
-
-  packages/tsconfig: {}
 
 packages:
 
@@ -645,11 +584,6 @@ packages:
       yaml:
         optional: true
 
-  prettier@3.2.5:
-    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
-    engines: {node: '>=14'}
-    hasBin: true
-
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
@@ -764,45 +698,6 @@ packages:
         optional: true
       typescript:
         optional: true
-
-  turbo-darwin-64@2.0.9:
-    resolution: {integrity: sha512-owlGsOaExuVGBUfrnJwjkL1BWlvefjSKczEAcpLx4BI7Oh6ttakOi+JyomkPkFlYElRpjbvlR2gP8WIn6M/+xQ==}
-    cpu: [x64]
-    os: [darwin]
-
-  turbo-darwin-arm64@2.0.9:
-    resolution: {integrity: sha512-XAXkKkePth5ZPPE/9G9tTnPQx0C8UTkGWmNGYkpmGgRr8NedW+HrPsi9N0HcjzzIH9A4TpNYvtiV+WcwdaEjKA==}
-    cpu: [arm64]
-    os: [darwin]
-
-  turbo-linux-64@2.0.9:
-    resolution: {integrity: sha512-l9wSgEjrCFM1aG16zItBsZ206ZlhSSx1owB8Cgskfv0XyIXRGHRkluihiaxkp+UeU5WoEfz4EN5toc+ICA0q0w==}
-    cpu: [x64]
-    os: [linux]
-
-  turbo-linux-arm64@2.0.9:
-    resolution: {integrity: sha512-gRnjxXRne18B27SwxXMqL3fJu7jw/8kBrOBTBNRSmZZiG1Uu3nbnP7b4lgrA/bCku6C0Wligwqurvtpq6+nFHA==}
-    cpu: [arm64]
-    os: [linux]
-
-  turbo-windows-64@2.0.9:
-    resolution: {integrity: sha512-ZVo0apxUvaRq4Vm1qhsfqKKhtRgReYlBVf9MQvVU1O9AoyydEQvLDO1ryqpXDZWpcHoFxHAQc9msjAMtE5K2lA==}
-    cpu: [x64]
-    os: [win32]
-
-  turbo-windows-arm64@2.0.9:
-    resolution: {integrity: sha512-sGRz7c5Pey6y7y9OKi8ypbWNuIRPF9y8xcMqL56OZifSUSo+X2EOsOleR9MKxQXVaqHPGOUKWsE6y8hxBi9pag==}
-    cpu: [arm64]
-    os: [win32]
-
-  turbo@2.0.9:
-    resolution: {integrity: sha512-QaLaUL1CqblSKKPgLrFW3lZWkWG4pGBQNW+q1ScJB5v1D/nFWtsrD/yZljW/bdawg90ihi4/ftQJ3h6fz1FamA==}
-    hasBin: true
-
-  typescript@5.4.5:
-    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
-    engines: {node: '>=14.17'}
-    hasBin: true
 
   typescript@5.5.4:
     resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
@@ -1268,8 +1163,6 @@ snapshots:
     dependencies:
       lilconfig: 3.1.2
 
-  prettier@3.2.5: {}
-
   punycode@2.3.1: {}
 
   queue-microtask@1.2.3: {}
@@ -1401,35 +1294,6 @@ snapshots:
       - supports-color
       - tsx
       - yaml
-
-  turbo-darwin-64@2.0.9:
-    optional: true
-
-  turbo-darwin-arm64@2.0.9:
-    optional: true
-
-  turbo-linux-64@2.0.9:
-    optional: true
-
-  turbo-linux-arm64@2.0.9:
-    optional: true
-
-  turbo-windows-64@2.0.9:
-    optional: true
-
-  turbo-windows-arm64@2.0.9:
-    optional: true
-
-  turbo@2.0.9:
-    optionalDependencies:
-      turbo-darwin-64: 2.0.9
-      turbo-darwin-arm64: 2.0.9
-      turbo-linux-64: 2.0.9
-      turbo-linux-arm64: 2.0.9
-      turbo-windows-64: 2.0.9
-      turbo-windows-arm64: 2.0.9
-
-  typescript@5.4.5: {}
 
   typescript@5.5.4: {}
 

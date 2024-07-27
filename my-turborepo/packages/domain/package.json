@@ -1,0 +1,21 @@
+{
+    "name": "@fnshop/domain",
+    "version": "0.1.0",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "private":false,
+    "files": ["./dist/**"],
+    "scripts": {
+        "build": "tsup"
+    },
+    "devDependencies": {
+        "@types/node": "20.14.12",
+        "@fnshop/tsconfig": "workspace:*)",
+        "tsup": "8.2.3",
+        "typescript": "5.5.4"
+    },
+    "dependencies": {
+        "zod": "3.23.8"
+    }
+}

@@ -1,1 +1,1 @@
-import {} from "@fnshop/domain"
+import {Product} from "@fnshop/domain"
